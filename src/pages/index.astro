@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import AutoPlayVideo from '../components/AutoPlayVideo.astro';
+import Screenshots from '../components/Screenshots.astro';
 ---
 
 <Layout>
-	<Welcome />
+    <Header />
+    <main class="container">
+        <h2>About game</h2>
+        <p>
+            Help <b>Murazu</b>, a factory android girl, escape a long abandoned
+            facility in a fast-paced puzzle platformer. Dash through obstacles,
+            launch yourself like a rocket, and reach the finish as quickly as
+            you can!
+        </p>
+        <AutoPlayVideo src="/video/murazu_2_description_0.webm" />
+        <h2>Features</h2>
+        <ul>
+            <li>
+                3 chapters full of fast-paced platforming and puzzle solving
+                action
+            </li>
+            <li>
+                <b>Steam Workshop support</b> where you can download full custom campaigns
+            </li>
+            <li>
+                <b>Challenging time goals</b> for completionists to hunt (including
+                extra tough author times)
+            </li>
+            <li>
+                <b>Steam Leaderboards</b> where you can compete for best times with
+                your friends or with the whole world
+            </li>
+            <li>Full <b>Controller</b> and <b>Steam Deck</b> support</li>
+        </ul>
+        <AutoPlayVideo src="/video/murazu_2_description_1.webm" />
+        <div class="container">
+            <center>
+                <a
+                    class="tag"
+                    href="https://store.steampowered.com/app/4543000/Murazu_2/"
+                    rel="noopener"
+                    target="_blank">Wishlist now!</a
+                >
+            </center>
+        </div>
+    </main>
+    <div class="container">
+        <h2>Screenshots</h2>
+        <Screenshots />
+        <center>
+            <a href="/presskit.zip" rel="noopener" target="_blank"
+                >Download presskit</a
+            >
+        </center>
+    </div>
+    <footer class="container">
+        <center>
+            <span>Punished Bernadetta with ❤️</span>
+            <a href="https://detta.dev" rel="noopener" target="_blank"
+                >Detta.dev</a
+            >
+        </center>
+    </footer>
 </Layout>

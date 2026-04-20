@@ -1,23 +1,130 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Murazu 2</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+    @font-face {
+        font-family: 'Fira Sans';
+        src:
+            local('Fira Sans'),
+            url('/fonts/firaSans/FiraSans-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Fira Sans';
+        src:
+            local('Fira Sans'),
+            url('/fonts/firaSans/FiraSans-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Fira Sans';
+        src:
+            local('Fira Sans'),
+            url('/fonts/firaSans/FiraSans-Italic.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Fira Sans';
+        src:
+            local('Fira Sans'),
+            url('/fonts/firaSans/FiraSans-BoldItalic.woff2') format('woff2');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+    }
+    :root {
+        --font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana,
+            sans-serif;
+
+        --text-color: #e6edf3;
+        --link-color: #ff94cb;
+        --footnote-color: #d8e2e8;
+        /* --text-shadow: 0px 0px 5px #000000; */
+
+        --icon-color: var(--text-color);
+        --icon-highlight-top: var(--text-color);
+        --icon-highlight-bottom: var(--tag-background-1);
+
+        --background-0: #15101c;
+        --background-1: #241b2f;
+        --background-2: #372947;
+
+        --tag-background-1: #c05c8f;
+    }
+    html {
+        font-family: var(--font-family);
+        color: var(--text-color);
+        background-color: var(--background-0);
+        line-height: 1.2;
+    }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+		flex-direction: column;
+    }
+    a {
+        color: var(--link-color);
+    }
+    a:visited {
+        color: var(--link-color);
+    }
+    .container {
+        background-color: var(--background-1);
+        max-width: 95ch;
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .tag {
+        background-color: var(--tag-background-1);
+        display: inline;
+        padding: 1rem 0.6em 1rem 1.25em;
+        border-radius: 99999999px;
+        position: relative;
+        white-space: nowrap;
+        text-shadow: var(--text-shadow);
+        color: var(--text-color);
+        border: none;
+        font-size: 2rem;
+		text-decoration: none;
+		color: white;
+    }
+    .tag:before {
+        content: '●';
+        position: absolute;
+        font-size: 0.7em;
+        top: 50%;
+        left: 0.8em;
+        transform: translate(-50%, -50%);
+    }
+    button {
+        font-family: var(--font-family);
+    }
 </style>

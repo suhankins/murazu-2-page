@@ -1,0 +1,53 @@
+---
+import screenshot0 from '../assets/screenshots/4546010_20260401142514_1.png';
+import screenshot1 from '../assets/screenshots/4546010_20260401142536_1.png';
+import screenshot2 from '../assets/screenshots/4546010_20260401142552_1.png';
+import screenshot3 from '../assets/screenshots/4546010_20260401142716_1.png';
+import screenshot4 from '../assets/screenshots/4546010_20260401150242_1.png';
+import screenshot5 from '../assets/screenshots/4546010_20260401150342_1.png';
+import screenshot6 from '../assets/screenshots/4546010_992.jpg';
+import Screenshot from './Screenshot.astro';
+
+const screenshots = [
+    {
+        src: screenshot0.src,
+        href: '/screenshots/4546010_20260401142514_1.png',
+    },
+    {
+        src: screenshot1.src,
+        href: '/screenshots/4546010_20260401142536_1.png',
+    },
+    {
+        src: screenshot2.src,
+        href: '/screenshots/4546010_20260401142552_1.png',
+    },
+    {
+        src: screenshot3.src,
+        href: '/screenshots/4546010_20260401142716_1.png',
+    },
+    {
+        src: screenshot4.src,
+        href: '/screenshots/4546010_20260401150242_1.png',
+    },
+    {
+        src: screenshot5.src,
+        href: '/screenshots/4546010_20260401150342_1.png',
+    },
+    {
+        src: screenshot6.src,
+        href: '/screenshots/4546010_992.jpg',
+    },
+];
+---
+
+<div>
+    {screenshots.map((screenshot) => <Screenshot {...screenshot} />)}
+</div>
+
+<style>
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 10px;
+    }
+</style>

@@ -1,0 +1,86 @@
+---
+import murazuImg from '../assets/murazu.png';
+import birdsImg from '../assets/birds.png';
+import logoImg from '../assets/logo.png';
+---
+
+<header>
+    <img class="decoration murazu" src={murazuImg.src} alt="" />
+    <img class="decoration birds" src={birdsImg.src} alt="" />
+    <div class="logo-container">
+        <img class="logo" src={logoImg.src} alt="Murazu 2 logo" />
+        <div class="subtitle">Fast-paced puzzle platformer</div>
+    </div>
+    <a class="wishlist tag" href="https://store.steampowered.com/app/4543000/Murazu_2/" rel="noopener" target="_blank">Demo available now!</a>
+</header>
+
+<style>
+    header {
+        position: relative;
+        height: 95dvh;
+        max-height: 95dvh;
+        background-image: url('./sky.webp');
+        width: 100vw;
+    }
+    .decoration {
+        max-height: 70dvh;
+        position: absolute;
+        animation: slide-in 2s;
+    }
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translate(0, 50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0, 0px);
+        }
+    }
+    .murazu {
+        left: 0;
+        top: 50%;
+        translate: 0 -50%;
+    }
+    .birds {
+        right: 0;
+        height: 50dvh;
+        bottom: 50px;
+    }
+    @media screen and (max-width: 660px) {
+        .decoration {
+            max-width: 100%;
+            max-height: unset;
+        }
+        .birds {
+            visibility: hidden;
+        }
+        .murazu {
+            left: -100px;
+        }
+    }
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        max-width: 60%;
+        width: 600px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .subtitle {
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 0px 3px black;
+        font-size: 2.5rem;
+    }
+    .wishlist {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        translate: -50% 0;
+    }
+</style>

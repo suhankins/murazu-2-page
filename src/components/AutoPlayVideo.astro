@@ -1,0 +1,15 @@
+---
+export interface Props {
+    src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<video src={src} loop autoplay muted>Your browser can't play videos! (T_T)</video>
+
+<style>
+    video {
+        width: 100%;
+    }
+</style>
