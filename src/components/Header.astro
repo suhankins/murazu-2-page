@@ -18,13 +18,13 @@ import Image from 'astro/components/Image.astro';
 <style>
     header {
         position: relative;
-        height: 95dvh;
-        max-height: 95dvh;
+        height: 95svh;
+        max-height: 95svh;
         background-image: url('./sky.webp');
         width: 100vw;
     }
     .decoration {
-        max-height: 70dvh;
+        max-height: 70svh;
         position: absolute;
         animation: slide-in 2s;
     }
@@ -51,7 +51,6 @@ import Image from 'astro/components/Image.astro';
     @media screen and (max-width: 660px) {
         .decoration {
             max-width: 100%;
-            max-height: unset;
         }
         .birds {
             visibility: hidden;
