@@ -2,11 +2,12 @@
 import murazuImg from '../assets/murazu.png';
 import birdsImg from '../assets/birds.png';
 import logoImg from '../assets/logo.png';
+import Image from 'astro/components/Image.astro';
 ---
 
 <header>
-    <img class="decoration murazu" src={murazuImg.src} alt="" />
-    <img class="decoration birds" src={birdsImg.src} alt="" />
+    <Image width={584} height={694} class="decoration murazu" src={murazuImg} alt="" />
+    <Image width={486} height={496} class="decoration birds" src={birdsImg} alt="" />
     <div class="logo-container">
         <img class="logo" src={logoImg.src} alt="Murazu 2 logo" />
         <div class="subtitle">Fast-paced puzzle platformer</div>
